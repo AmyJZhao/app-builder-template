@@ -1,6 +1,6 @@
 {
   "name": "@ajzhao32423423894/app-builder-template-1",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A template for testing purposes",
   "engines": {
     "node": "^14 || ^16"
