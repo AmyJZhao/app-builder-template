@@ -1,6 +1,6 @@
 {
-  "name": "@lenaorobei/app-builder-template",
-  "version": "1.0.2",
+  "name": "@ajzhao32423423894/app-builder-template",
+  "version": "1.0.5",
   "description": "A template for testing purposes",
   "engines": {
     "node": "^14 || ^16"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lenaorobei/app-builder-template.git"
+    "url": "https://github.com/AmyJZhao/app-builder-template"
   },
   "keywords": [
     "aio",

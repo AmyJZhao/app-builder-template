@@ -6,15 +6,14 @@ $schema: http://json-schema.org/draft-07/schema
 $id: https://adobe.io/schemas/app-builder-templates/1
 
 categories:
-  - add-action
+  - action
+  - ui
 
 # metadata for a category
 extension:
-  -  id: dx/excshell/1
-     operations:
-       - view
+  serviceCode: dx/excshell/1
 
-services:
+apis:
   - AnalyticsSDK
   - CampaignStandard
   - Runtime
