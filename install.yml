@@ -6,13 +6,44 @@ $schema: http://json-schema.org/draft-07/schema
 $id: https://adobe.io/schemas/app-builder-templates/1
 
 categories:
-  - action
-  - ui
-
-# metadata for a category
-extension:
-  serviceCode: dx/excshell/1
-
+    - code
+    - ui
+ 
+# if the template implements an extension point or multiple extension points, this top-level property is available
+# an array of objects (object here for possible future properties if necessary)
+extensions:
+- extensionPointId: dx/excshell/1
+ 
+ 
+# these are the optional environment variables
+# these values may be used instead of interactive input
+# TODO: we might need to namespace the env var name because of conflicts?
+env:
+  - SOMEKEY
+   
+# workspaces required. Runtime namespaces are added by default for each workspace,
+# if the runtime key is set to true (default?)
+# Staging and Production are the defaults if not provided (if a Service is set)
+workspaces:
+  - Staging
+  - Production
+  - Development
+ 
+# required services, listed by their SDK code
+# any config for the service is listed under the service
+# See https://git.corp.adobe.com/CNA/aio-template-support/blob/main/services.json
+#   for an (outdated) list. See table in the next section
 apis:
-  - code: AnalyticsSDK
-  - code: CampaignStandard
+- code: AnalyticsSDK
+  credentials: OAuth #or 'Service Account'
+- code: CampaignStandard
+- code: Mesh # service config following. TBD: This may be a top-level property instead
+  endpoints:
+      - my-action: https://some-action.com/action
+ 
+ 
+runtime: true
+ 
+event:
+  consumer:
+    name: registration-name
