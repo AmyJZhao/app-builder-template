@@ -6,7 +6,7 @@ $schema: http://json-schema.org/draft-07/schema
 $id: https://adobe.io/schemas/app-builder-templates/1
 
 categories:
-    - code
+    - action
     - ui
  
 # if the template implements an extension point or multiple extension points, this top-level property is available
